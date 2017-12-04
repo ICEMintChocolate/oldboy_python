@@ -25,3 +25,42 @@
 #     else:
 #         count +=1
 #         print('登录失败')
+user_list = ['seven','alex','egon']
+user_pass = '123'
+count = 0
+while count < 3:
+    f = open('c:\chenggong.txt','r')
+    user_chengong = f.readlines()
+    f.close()
+    f = open('c:\shibai.txt','r')
+    user_shibai = f.readlines()
+    f.close()
+#第一次正常的循环
+    if user_chengong == [] :
+        user_input = input('请输入用户：')
+        user_pass_input = input('请输入密码：')
+        if user_input in user_list  and user_pass_input == user_pass:
+            f = open('c:\chenggong.txt','w')
+            f.write("%s\n"%user_input)
+            f.close()
+            print('登录成功')
+            count += 1
+            continue
+        else:
+            f = open('c:\shibai.txt','w')
+            f.write("%s\n"%user_input)
+            f.close()
+            print('登录失败')
+            count += 1
+            continue
+    if user_chengong != []:
+            print('%s 登录成功'%user_chengong)
+            print('请在 >>> 后开始输入命令，q 为退出')
+            tag = True
+            while tag:
+                cmd_input = input('>>>')
+                if cmd_input == 'q':
+                    print('%s 成功退出'%user_chengong)
+                    tag = False
+
+            break
