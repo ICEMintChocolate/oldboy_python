@@ -32,7 +32,7 @@
 # print('name' in info)
 
 #4、删除
-info={'name':'egon','age':18,'sex':'male'}
+# info={'name':'egon','age':18,'sex':'male'}
 # print(info.pop('name'))
 # print(info)
 # print(info.popitem()) #('sex', 'male')
@@ -43,12 +43,12 @@ info={'name':'egon','age':18,'sex':'male'}
 # print(list(info.keys())[0])
 
 # print(list(info.values()))
-print(list(info.items()))
+# print(list(info.values()))
 
 #6、循环
-# info={'name':'egon','age':18,'sex':'male'}
-# for k in info:
-#     print(k,info[k])
+info={'name':'egon','age':18,'sex':'male'}
+for k in info:
+     print(k)
 
 
 
