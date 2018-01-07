@@ -21,7 +21,7 @@ def repayment():
                 total_amount = l[i][6]
                 if  float(total_amount) < 0.00:
                     print('账户名：%s,还款金额：%s'%(user_input,l[i][6]))
-                    print('是否还款，请进行选择')
+                    print('是否还款，请进行选择：')
                     TFlist = [
                         ('是'),
                         ('否')
@@ -32,7 +32,7 @@ def repayment():
                     TF_input = input('请根据提示进行选择：')
                     if TF_input == '0':
                         while True :
-                            repayment_amount_input = input('请您输入要还款的金额')
+                            repayment_amount_input = input('请您输入要还款的金额：')
                             huankuang = float(repayment_amount_input)+float(total_amount)
                             l[i][6] = huankuang
                             total_amount = l[i][6]
@@ -52,7 +52,7 @@ def repayment():
                                 f.close()
                                 break
                             elif float(huankuang) < 0.00:
-                                print('还款失败，您还需要还款 %s'%huankuang)
+                                print('还款失败，您还需要还款： %s'%huankuang)
                                 continue
                     elif TF_input == '1':
                         print('由于欠款未还清，账号被冻结')

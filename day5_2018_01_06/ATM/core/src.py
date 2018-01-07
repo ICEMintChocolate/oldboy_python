@@ -2,6 +2,9 @@ from lib import logs
 from lib import cash_withdrawal
 from lib import shopping
 from lib import user_repayment
+from lib import transfer_users
+
+
 def shop():
     print('购物')
     shopping.shops()
@@ -14,13 +17,15 @@ def ye():
 
 def transfer_accounts():
     print('转账')
-    log_msg = 'xxxx3'
-    logs.logs(log_msg)
+    transfer_users.transfer()
+    logs.logs(transfer_accounts())
 
 def cashs():
     print('提取现金')
     cash_withdrawal.cash()
     logs.logs(cash_withdrawal.cash())
+
+def
 def run():
     msg = '''
     1 购物
