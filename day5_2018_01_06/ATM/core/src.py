@@ -25,7 +25,10 @@ def cashs():
     cash_withdrawal.cash()
     logs.logs(cash_withdrawal.cash())
 
-def
+def update():
+    print('增加&修改用户')
+
+
 def run():
     msg = '''
     1 购物
@@ -45,3 +48,5 @@ def run():
             transfer_accounts()
         elif user_input == '4':
             cashs()
+        elif user_input == '5':
+            update()

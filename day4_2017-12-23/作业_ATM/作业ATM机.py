@@ -171,6 +171,5 @@ cash()
 
 
 
-
-#功能5
-#9 ATM记录操作日志
+def logs():
+    pass
