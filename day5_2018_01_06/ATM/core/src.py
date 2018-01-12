@@ -25,9 +25,11 @@ def cashs():
     cash_withdrawal.cash()
     logs.logs(cash_withdrawal.cash())
 
-def update():
+def update_users():
     print('增加&修改用户')
 
+def credit_card_bill():
+    print('信用卡还款和账单')
 
 def run():
     msg = '''
@@ -35,6 +37,8 @@ def run():
     2 还款
     3 转账
     4 提取现金
+    5 增加&修改用户
+    6 信用卡还款和账单
     '''
     while True:
         print(msg)
@@ -49,4 +53,6 @@ def run():
         elif user_input == '4':
             cashs()
         elif user_input == '5':
-            update()
+            update_users()
+        elif user_input == '5':
+            credit_card_bill()

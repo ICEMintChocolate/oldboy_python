@@ -7,6 +7,6 @@ def db_user():
     f = open(settings.DB_PATH, 'r+', encoding='utf-8')
     for i in l:
         lines = ','.join(i)
-        f.write(lines)
+        f.write(lines).split()
     f.flush()
     f.close()
